@@ -123,9 +123,8 @@ def fetch_entries(config):
     return entries, auth
 
 def main():
+    import sys; out_dir = sys.argv[1]
     config = load_config()
-    # Obsidian VaultのHatenaBlogフォルダに直接書き出し
-    out_dir = '/mnt/g/マイドライブ/Obsidian/Main/HatenaBlog'  # 必要に応じてパスを調整
     entries, auth = fetch_entries(config)
     save_entries(entries, out_dir, auth=auth)
 

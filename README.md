@@ -28,11 +28,8 @@ pip install -r requirements.txt
 2. Log in with your Hatena account
 3. Click "OAuth 開発者向け設定ページ" (OAuth Developer Settings)
 4. Click "アプリケーションを登録" (Register Application)
-5. Fill in the required information:
-   - アプリケーション名 (Application Name): Any name you want
-   - コールバックURL (Callback URL): `http://localhost:8000/callback`
-   - スコープ (Scope): Select `read_private` and `write_private`
-6. After registration, you'll get:
+5. Activate `read_private` and `write_private` in the "承認を求める操作" field
+6. Refer to the "キー" field:
    - Consumer Key
    - Consumer Secret
 
@@ -83,7 +80,7 @@ blog_id: <Blog ID>
 
 2. Run the export script:
 ```bash
-python export_hatena_to_md.py
+python export_hatena_to_md.py </path/to/Obsidian Vault/>
 ```
 
 The script will:
